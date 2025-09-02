@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/jmofianga/Desktop/next-zod/app/auth/page.tsx"],"sourcesContent":["import ProductForm from '@/components/ProductForm';\r\nimport React from 'react';\r\n''\r\nconst page = () => {\r\n    return <>\r\n        <div>\r\n        </div>\r\n    </>\r\n}\r\n\r\nexport default page"],"names":[],"mappings":";;;;AAEA;;AACA,MAAM,OAAO;IACT,qBAAO;kBACH,cAAA,8OAAC;;;;;;AAGT;uCAEe","debugId":null}}]
+}

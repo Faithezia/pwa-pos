@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/jmofianga/Desktop/soure_code/next-zod/app/kyc/page.tsx"],"sourcesContent":["import React from 'react'\r\n\r\nconst Kyc = () => {\r\n    return <>\r\n        <div className='flex flex-justify-center'>\r\n            <div className=''>\r\n                \r\n            </div>\r\n        </div>\r\n    </>\r\n}\r\n\r\nexport default Kyc"],"names":[],"mappings":";;;;;AAEA,MAAM,MAAM;IACR,qBAAO;kBACH,cAAA,8OAAC;YAAI,WAAU;sBACX,cAAA,8OAAC;gBAAI,WAAU;;;;;;;;;;;;AAK3B;uCAEe","debugId":null}}]
+}

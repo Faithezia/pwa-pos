@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/jmofianga/Desktop/soure_code/next-zod/app/%28root%29/page.tsx"],"sourcesContent":["import React from 'react'\r\n\r\nconst RootPage = () => {\r\n    return (\r\n        <div className='flex flex-center align-center'>\r\n\r\n        </div>\r\n    )\r\n}\r\n\r\nexport default RootPage"],"names":[],"mappings":";;;;;AAEA,MAAM,WAAW;IACb,qBACI,8OAAC;QAAI,WAAU;;;;;;AAIvB;uCAEe","debugId":null}},
+    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/jmofianga/Desktop/soure_code/next-zod/app/page.tsx"],"sourcesContent":["import React from 'react'\r\nimport RootPage from './(root)/page'\r\n\r\nconst page = () => {\r\n    return (\r\n        <RootPage />\r\n    )\r\n}\r\n\r\nexport default page"],"names":[],"mappings":";;;;AACA;;;AAEA,MAAM,OAAO;IACT,qBACI,8OAAC,wHAAA,CAAA,UAAQ;;;;;AAEjB;uCAEe","debugId":null}}]
+}
