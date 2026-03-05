@@ -119,33 +119,3 @@ const products = [
   },
 ];
 ```
-
-## User Form Fields
-
-Form configuration for user input:
-
-```javascript
-export const IUserFormFields = [
-    {
-        id: "1",
-        label: "First Name",
-        fieldName: "firstName",
-        fieldType: "text",
-        placeholder: "First Name",
-    },
-    {
-        id: "2",
-        label: "Last Name",
-        fieldName: "lastName",
-        fieldType: "text",
-        placeholder: "Last Name",
-    },
-    {
-        id: "3",
-        label: "Contact Number",
-        fieldName: "contactNum",
-        fieldType: "text",
-        placeholder: "Contact Number",
-    },
-];
-```
