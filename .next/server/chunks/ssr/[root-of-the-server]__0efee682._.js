@@ -255,7 +255,8 @@ const IkycFormFields = [
 
 __turbopack_context__.s({
     "useCartStore": ()=>useCartStore,
-    "useCheckoutStore": ()=>useCheckoutStore
+    "useCheckoutStore": ()=>useCheckoutStore,
+    "useSearchItem": ()=>useSearchItem
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$dummyData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/dummyData.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/zustand/esm/react.mjs [app-ssr] (ecmascript)");
@@ -296,6 +297,16 @@ const useCheckoutStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$nod
                         ...state.products,
                         ...products
                     ]
+                }))
+    }));
+const useSearchItem = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["create"])()((set)=>({
+        barcode: "",
+        items: [],
+        setbarcode: (code)=>set((state)=>({
+                    barcode: state.barcode = code
+                })),
+        storeItems: (data)=>set((state)=>({
+                    items: state.items = data
                 }))
     }));
 }),
@@ -340,7 +351,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b
 ;
 ;
 const CheckoutFooter = ({ grandTotal, totalItems, scannedProduct })=>{
-    console.log("data from footer", scannedProduct);
     const { getItems } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCheckoutStore"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex flex-row justify-between p-5 items-center",
@@ -353,7 +363,7 @@ const CheckoutFooter = ({ grandTotal, totalItems, scannedProduct })=>{
                         children: "Subtotal"
                     }, void 0, false, {
                         fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                        lineNumber: 19,
+                        lineNumber: 18,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -364,13 +374,13 @@ const CheckoutFooter = ({ grandTotal, totalItems, scannedProduct })=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                        lineNumber: 20,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                lineNumber: 18,
+                lineNumber: 17,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -383,17 +393,17 @@ const CheckoutFooter = ({ grandTotal, totalItems, scannedProduct })=>{
                         color: "#216c58"
                     }, void 0, false, {
                         fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                        lineNumber: 30,
+                        lineNumber: 29,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                    lineNumber: 25,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                lineNumber: 24,
+                lineNumber: 23,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -407,7 +417,7 @@ const CheckoutFooter = ({ grandTotal, totalItems, scannedProduct })=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                        lineNumber: 34,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -418,19 +428,19 @@ const CheckoutFooter = ({ grandTotal, totalItems, scannedProduct })=>{
                         children: "Checkout"
                     }, void 0, false, {
                         fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                        lineNumber: 35,
+                        lineNumber: 34,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                lineNumber: 33,
+                lineNumber: 32,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/cart/CheckoutFooter.tsx",
-        lineNumber: 17,
+        lineNumber: 16,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -456,25 +466,30 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$cart$2f$Checko
 ;
 ;
 ;
-const ItemCard = ({ barcode })=>{
-    const products = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCartStore"])((state)=>state.products);
-    const increase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCartStore"])((state)=>state.increaseQuantity);
-    const decrease = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCartStore"])((state)=>state.decreaseQuantity);
-    // const total = useCartStore((state) => state.grandTotal);
+const ItemCard = ()=>{
+    const { decreaseQuantity, increaseQuantity, products } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCartStore"])();
+    const { barcode, items } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useSearchItem"])();
     const filteredProducts = products.filter((products)=>barcode.includes(products.productBarcode));
-    // const checkedoutProd = useCheckoutStore((state) => state.products);
-    // let datas = [];
-    // checkedoutProd.length === 0
-    //   ? (datas = filteredProducts)
-    //   : (datas = checkedoutProd);
-    const total = filteredProducts.reduce((acc, product)=>acc + product.price * product.quantity, 0);
+    const uniqueItems = [
+        ...new Set(items)
+    ];
+    if (uniqueItems) {
+        products.forEach((product)=>{
+            if (product.productBarcode === barcode) {
+                items.push(product);
+            }
+        });
+    }
+    console.log("uniqueItems", uniqueItems);
+    console.log(filteredProducts);
+    const total = uniqueItems.reduce((acc, product)=>acc + product.price * product.quantity, 0);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
                 className: "max-w-full max-h-full flex relative overflow-y-hidden",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "xs:mb-25 sm:mb-25 md:mb-25 lg:mb-25 w-screen m-6 grid flex grid-cols-1 items-start justify-center gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 overflow-y-auto",
-                    children: filteredProducts.map((products)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "xs:mb-25 sm:mb-25 md:mb-25 lg:mb-25 w-screen m-6 grid flex grid-cols-1 items-start justify-center gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 overflow-y-auto",
+                    children: uniqueItems.map((products)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "w-full h-50 flex flex-row rounded-lg bg-[#fff]",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -487,12 +502,12 @@ const ItemCard = ({ barcode })=>{
                                         className: "object-contain h-full w-[150]"
                                     }, products.id, false, {
                                         fileName: "[project]/components/cart/ItemCard.tsx",
-                                        lineNumber: 39,
+                                        lineNumber: 48,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/components/cart/ItemCard.tsx",
-                                    lineNumber: 38,
+                                    lineNumber: 47,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -506,7 +521,7 @@ const ItemCard = ({ barcode })=>{
                                                     children: products.productName
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/cart/ItemCard.tsx",
-                                                    lineNumber: 50,
+                                                    lineNumber: 59,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -517,13 +532,13 @@ const ItemCard = ({ barcode })=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/cart/ItemCard.tsx",
-                                                    lineNumber: 53,
+                                                    lineNumber: 62,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/cart/ItemCard.tsx",
-                                            lineNumber: 49,
+                                            lineNumber: 58,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -533,7 +548,7 @@ const ItemCard = ({ barcode })=>{
                                                     className: "sm:space-x-3 md:space-x-5 space-x-5 flex flex-row items-center",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                            onClick: ()=>decrease(products.id),
+                                                            onClick: ()=>decreaseQuantity(products.id),
                                                             variant: "outline",
                                                             size: "icon",
                                                             className: "size-8 text-[#b94350] border-[#b94350] cursor-pointer hover:bg-[#b94350]",
@@ -541,12 +556,12 @@ const ItemCard = ({ barcode })=>{
                                                                 className: ""
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/cart/ItemCard.tsx",
-                                                                lineNumber: 66,
+                                                                lineNumber: 75,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/cart/ItemCard.tsx",
-                                                            lineNumber: 60,
+                                                            lineNumber: 69,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -554,11 +569,11 @@ const ItemCard = ({ barcode })=>{
                                                             children: products.quantity
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/cart/ItemCard.tsx",
-                                                            lineNumber: 68,
+                                                            lineNumber: 77,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                            onClick: ()=>increase(products.id),
+                                                            onClick: ()=>increaseQuantity(products.id),
                                                             variant: "outline",
                                                             size: "icon",
                                                             className: "size-8 text-[#276857] border-[#276857] cursor-pointer hover:bg-[#78d0b9]",
@@ -566,18 +581,18 @@ const ItemCard = ({ barcode })=>{
                                                                 className: ""
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/cart/ItemCard.tsx",
-                                                                lineNumber: 77,
+                                                                lineNumber: 86,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/cart/ItemCard.tsx",
-                                                            lineNumber: 71,
+                                                            lineNumber: 80,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/cart/ItemCard.tsx",
-                                                    lineNumber: 59,
+                                                    lineNumber: 68,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -594,46 +609,46 @@ const ItemCard = ({ barcode })=>{
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/cart/ItemCard.tsx",
-                                                                lineNumber: 83,
+                                                                lineNumber: 92,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/cart/ItemCard.tsx",
-                                                        lineNumber: 81,
+                                                        lineNumber: 90,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/cart/ItemCard.tsx",
-                                                    lineNumber: 80,
+                                                    lineNumber: 89,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/cart/ItemCard.tsx",
-                                            lineNumber: 58,
+                                            lineNumber: 67,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/cart/ItemCard.tsx",
-                                    lineNumber: 48,
+                                    lineNumber: 57,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, products.id, true, {
                             fileName: "[project]/components/cart/ItemCard.tsx",
-                            lineNumber: 34,
+                            lineNumber: 43,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/components/cart/ItemCard.tsx",
-                    lineNumber: 30,
+                    lineNumber: 39,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/cart/ItemCard.tsx",
-                lineNumber: 29,
+                lineNumber: 38,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -641,22 +656,22 @@ const ItemCard = ({ barcode })=>{
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
                     className: "fixed w-full w-full h-auto bottom-0 bg-[#f8faf7]",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$cart$2f$CheckoutFooter$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        scannedProduct: filteredProducts,
+                        scannedProduct: uniqueItems,
                         grandTotal: total,
-                        totalItems: filteredProducts.length
+                        totalItems: uniqueItems.length
                     }, void 0, false, {
                         fileName: "[project]/components/cart/ItemCard.tsx",
-                        lineNumber: 96,
+                        lineNumber: 105,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/components/cart/ItemCard.tsx",
-                    lineNumber: 95,
+                    lineNumber: 104,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/cart/ItemCard.tsx",
-                lineNumber: 94,
+                lineNumber: 103,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
@@ -696,25 +711,25 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/input.tsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$use$2d$debounce$2f$dist$2f$index$2e$module$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/use-debounce/dist/index.module.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/store/posStore.ts [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
 ;
 ;
 const SearchBar = ({ placeholder })=>{
-    const searchParams = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useSearchParams"])();
-    const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["usePathname"])();
-    const { replace } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
+    // const searchParams = useSearchParams();
+    // const pathname = usePathname();
+    // const { replace } = useRouter();
+    const { setbarcode, barcode, items, storeItems } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useSearchItem"])();
     const handleSearch = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$use$2d$debounce$2f$dist$2f$index$2e$module$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useDebouncedCallback"])((term)=>{
-        console.log(`Searching... ${term}`);
-        const params = new URLSearchParams(searchParams);
-        const items = params;
+        // const params = new URLSearchParams(searchParams);
         if (term) {
-            items.append("barcode", term);
+            setbarcode(term);
+        } else {
+            setbarcode("");
         }
-        replace(`${pathname}?${params.toString()}`);
     }, 1000);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex flex-row bg-white rounded-lg",
@@ -725,15 +740,15 @@ const SearchBar = ({ placeholder })=>{
             id: "barcode",
             type: "text",
             placeholder: placeholder,
-            defaultValue: searchParams.get("barcode")?.toString()
+            defaultValue: barcode
         }, void 0, false, {
             fileName: "[project]/components/SearchBar.tsx",
-            lineNumber: 23,
+            lineNumber: 22,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/components/SearchBar.tsx",
-        lineNumber: 22,
+        lineNumber: 21,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

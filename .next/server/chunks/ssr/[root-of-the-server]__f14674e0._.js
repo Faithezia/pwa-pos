@@ -4,6 +4,7 @@ module.exports = {
 "use strict";
 
 __turbopack_context__.s({
+    "barCodeSchema": ()=>barCodeSchema,
     "barcodeScheme": ()=>barcodeScheme,
     "productSchema": ()=>productSchema,
     "userSchema": ()=>userSchema
@@ -28,6 +29,11 @@ const userSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$
     }),
     contactNum: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v4$2f$classic$2f$external$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().trim().min(1, {
         message: "Enter valid number"
+    })
+});
+const barCodeSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v4$2f$classic$2f$external$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].object({
+    barcode: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v4$2f$classic$2f$external$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().trim().min(1, {
+        message: "Enter valid barcode"
     })
 });
 }),

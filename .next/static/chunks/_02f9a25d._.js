@@ -16,14 +16,15 @@ var _s = __turbopack_context__.k.signature();
 ;
 const EyeBall = ()=>{
     _s();
-    const [mouseX, setMouseX] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [mouseX, setMouseX] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0); //storing cursor position
     const [mouseY, setMouseY] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
-    const eyeRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const eyeRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null); // DOM reference for the eyeball
+    //for tracking mouse movement and updates the states for every mouse movement
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "EyeBall.useEffect": ()=>{
             const handleMouseMove = {
                 "EyeBall.useEffect.handleMouseMove": (e)=>{
-                    console.log("x-axis:- ".concat(e.clientX, " | y-axis:- ").concat(e.clientY));
+                    // console.log(`x-axis:- ${e.clientX} | y-axis:- ${e.clientY}`);
                     setMouseX(e.clientX);
                     setMouseY(e.clientY);
                 }
@@ -39,19 +40,34 @@ const EyeBall = ()=>{
             x: 0,
             y: 0
         };
-        const eye = eyeRef.current.getBoundingClientRect();
-        const eyeCenterX = eye.left + eye.width / 2;
-        const eyeCenterY = eye.top + eye.height / 2;
-        const deltaX = mouseX - eyeCenterX;
-        const deltaY = mouseY - eyeCenterY;
-        const distance = Math.min(Math.sqrt(deltaX ** 2 + deltaY ** 2), 10);
-        const angle = Math.atan2(deltaY, deltaX);
-        const x = Math.cos(angle) * distance;
-        const y = Math.sin(angle) * distance;
+        const eye = eyeRef.current.getBoundingClientRect(); //getting the left(x) and top(y) position of the element in the viewport
+        //datas of the eye
+        //     {
+        //     "x": 360,
+        //     "y": 520.7999877929688,
+        //     "width": 48,
+        //     "height": 48,
+        //     "top": 520.7999877929688,
+        //     "right": 408,
+        //     "bottom": 568.7999877929688,
+        //     "left": 360
+        // }
+        const eyeCenterX = eye.left + eye.width / 2; //start from the edge of the element(eye.left) and add half of the element's width(eye.wdith/2) to get the center horizontally
+        const eyeCenterY = eye.top + eye.height / 2; //start from the top of the element(eye.top) and add half of the element's height(eye.height/2) to get the center vertically
+        //mouseX(horizontal) mouseY(vertical)
+        const deltaX = mouseX - eyeCenterX; //Subtract the horizontal position of the center of the eye eyeCenterX from mouseX to find the horizontal difference between the two positions.
+        const deltaY = mouseY - eyeCenterY; //Subtract the vertical position of the center of the eye eyeCenterY from mouseY to find the vertical difference between the two positions.
+        const distance = Math.min(Math.sqrt(deltaX ** 2 + deltaY ** 2), 10); //Pythagorean theorem to calculate the distance between two points
+        //we want to limit the distance the pupil can move, so we use Math.min to cap it at 10 pixels
+        const angle = Math.atan2(deltaY, deltaX); //Calculate the angle between the horizontal axis and the line connecting the eye center to the mouse position using Math.atan2,
+        // assume deltaX = 8 and deltaY = 6 => angle = Math.atan2(6, 8) => angle = 0.6435011087932844 radians
+        // compute the new x and y positions for the pupil using vector components based on the angle and distance
+        const x = Math.cos(angle) * distance; //resolves the vector onto the X-axis. x = cos(0.6435) * 10 = 8
+        const y = Math.sin(angle) * distance; //resolves the vector onto the Y-axis. y = sin(0.6435) * 10 = 6
         return {
             x,
             y
-        };
+        }; // returning the new position of the pupil
     };
     const pupilPosition = calculatePupilPosition();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -64,12 +80,12 @@ const EyeBall = ()=>{
             }
         }, void 0, false, {
             fileName: "[project]/components/EyeBall.tsx",
-            lineNumber: 42,
+            lineNumber: 61,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/components/EyeBall.tsx",
-        lineNumber: 38,
+        lineNumber: 57,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

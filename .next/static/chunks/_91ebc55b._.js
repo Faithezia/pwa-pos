@@ -92,6 +92,7 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
+    "IUserFormFields": ()=>IUserFormFields,
     "IkycFormFields": ()=>IkycFormFields,
     "dummyProducts": ()=>dummyProducts
 });
@@ -99,112 +100,135 @@ const dummyProducts = [
     {
         id: "prod1",
         productName: "Doritos",
-        price: 80,
+        price: 80.69,
         description: "One of the customer's favourite",
         imageUrl: "/products/doritos.png",
         productBarcode: "13a2sd654wqe654asd",
-        quantity: 12,
+        quantity: 1,
         createdAt: Date.now()
     },
     {
         id: "prod2",
         productName: "Lays",
-        price: 120,
+        price: 120.02,
         description: "The best chips in the world",
         imageUrl: "/products/lays.png",
-        productBarcode: "124123123123as",
-        quantity: 13,
+        productBarcode: "124123133123as",
+        quantity: 1,
         createdAt: Date.now()
     },
     {
         id: "prod3",
         productName: "Cobra",
-        price: 24,
+        price: 24.36,
         description: "The drinks that will make you stronger and kill you",
         imageUrl: "/products/cobra.png",
         productBarcode: "asd3123aeda",
-        quantity: 20,
+        quantity: 1,
         createdAt: Date.now()
     },
     {
         id: "prod4",
         productName: "Jack Daniel",
-        price: 800,
+        price: 800.69,
         description: "Whiskey",
         imageUrl: "/products/whiskey.png",
         productBarcode: "3242134sadaa",
-        quantity: 6,
+        quantity: 1,
         createdAt: Date.now()
     },
     {
         id: "prod5",
         productName: "Jack Daniel",
-        price: 800,
+        price: 800.69,
         description: "Whiskey",
         imageUrl: "/products/whiskey.png",
-        productBarcode: "3242134sadaa",
-        quantity: 6,
+        productBarcode: "12312312",
+        quantity: 1,
         createdAt: Date.now()
     },
     {
         id: "prod6",
         productName: "Jack Daniel",
-        price: 800,
+        price: 800.69,
         description: "Whiskey",
         imageUrl: "/products/whiskey.png",
-        productBarcode: "3242134sadaa",
-        quantity: 6,
+        productBarcode: "112312313",
+        quantity: 1,
         createdAt: Date.now()
     },
     {
         id: "prod7",
         productName: "Jack Daniel",
-        price: 800,
+        price: 800.69,
         description: "Whiskey",
         imageUrl: "/products/whiskey.png",
-        productBarcode: "3242134sadaa",
-        quantity: 6,
+        productBarcode: "14123123",
+        quantity: 1,
         createdAt: Date.now()
     },
     {
         id: "prod8",
         productName: "Jack Daniel",
-        price: 800,
+        price: 800.69,
         description: "Whiskey",
         imageUrl: "/products/whiskey.png",
-        productBarcode: "3242134sadaa",
-        quantity: 6,
+        productBarcode: "214555243",
+        quantity: 1,
         createdAt: Date.now()
     },
     {
         id: "prod9",
         productName: "Jack Daniel",
-        price: 800,
+        price: 800.69,
         description: "Whiskey",
         imageUrl: "/products/whiskey.png",
-        productBarcode: "3242134sadaa",
-        quantity: 6,
+        productBarcode: "12314342",
+        quantity: 1,
         createdAt: Date.now()
     },
     {
         id: "prod10",
         productName: "Jack Daniel",
-        price: 800,
+        price: 800.69,
         description: "Whiskey",
         imageUrl: "/products/whiskey.png",
-        productBarcode: "3242134sadaa",
-        quantity: 6,
+        productBarcode: "25234123",
+        quantity: 1,
         createdAt: Date.now()
     },
     {
         id: "prod11",
-        productName: "Jack Daniel",
-        price: 800,
-        description: "Whiskey",
-        imageUrl: "/products/whiskey.png",
-        productBarcode: "3242134sadaa",
-        quantity: 6,
+        productName: "Office Warehouse Inc - Panda Pen",
+        price: 40.49,
+        description: "Pen",
+        imageUrl: "/products/panda-pen.png",
+        productBarcode: "2998",
+        quantity: 1,
         createdAt: Date.now()
+    }
+];
+const IUserFormFields = [
+    {
+        id: "1",
+        label: "First Name",
+        fieldName: "firstName",
+        fieldType: "text",
+        placeholder: "First Name"
+    },
+    {
+        id: "2",
+        label: "Last Name",
+        fieldName: "lastName",
+        fieldType: "text",
+        placeholder: "Last Name"
+    },
+    {
+        id: "3",
+        label: "Contact Number",
+        fieldName: "contactNum",
+        fieldType: "text",
+        placeholder: "Contact Number"
     }
 ];
 const IkycFormFields = [
@@ -254,7 +278,9 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
-    "useCartStore": ()=>useCartStore
+    "useCartStore": ()=>useCartStore,
+    "useCheckoutStore": ()=>useCheckoutStore,
+    "useSearchItem": ()=>useSearchItem
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$dummyData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/dummyData.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/zustand/esm/react.mjs [app-client] (ecmascript)");
@@ -263,7 +289,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$e
 const calculateGrandTotal = (products)=>{
     return products.reduce((acc, product)=>acc + product.price * product.quantity, 0);
 };
-const useCartStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["create"])((set)=>({
+const useCartStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["create"])()((set)=>({
         products: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$dummyData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["dummyProducts"],
         grandTotal: calculateGrandTotal(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$dummyData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["dummyProducts"]),
         increaseQuantity: (id)=>set((state)=>{
@@ -288,6 +314,25 @@ const useCartStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
                 };
             })
     }));
+const useCheckoutStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["create"])()((set)=>({
+        products: [],
+        getItems: (products)=>set((state)=>({
+                    products: [
+                        ...state.products,
+                        ...products
+                    ]
+                }))
+    }));
+const useSearchItem = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["create"])()((set)=>({
+        barcode: "",
+        items: [],
+        setbarcode: (code)=>set((state)=>({
+                    barcode: state.barcode = code
+                })),
+        storeItems: (data)=>set((state)=>({
+                    items: state.items = data
+                }))
+    }));
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
@@ -303,13 +348,20 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$qr$2d$code$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__QrCodeIcon$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/qr-code.js [app-client] (ecmascript) <export default as QrCodeIcon>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/store/posStore.ts [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+;
 ;
 ;
 ;
 const CheckoutFooter = (param)=>{
-    let { grandTotal, totalItems } = param;
+    let { grandTotal, totalItems, scannedProduct } = param;
+    _s();
+    const { getItems } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCheckoutStore"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex flex-row justify-between p-5 ",
+        className: "flex flex-row justify-between p-5 items-center",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex flex-col",
@@ -319,24 +371,24 @@ const CheckoutFooter = (param)=>{
                         children: "Subtotal"
                     }, void 0, false, {
                         fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                        lineNumber: 14,
+                        lineNumber: 18,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "text-xl text-[#216c58] leading-none",
                         children: [
                             "₱",
-                            grandTotal
+                            grandTotal.toFixed(2)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                        lineNumber: 15,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                lineNumber: 13,
+                lineNumber: 17,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -349,17 +401,17 @@ const CheckoutFooter = (param)=>{
                         color: "#216c58"
                     }, void 0, false, {
                         fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                        lineNumber: 25,
+                        lineNumber: 29,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                    lineNumber: 20,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                lineNumber: 19,
+                lineNumber: 23,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -373,31 +425,38 @@ const CheckoutFooter = (param)=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                        lineNumber: 29,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                        variant: "default",
-                        className: "cursor-pointer bg-[#216c58] text-[#fff] hover:bg-[#1c493c]",
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        hidden: totalItems > 0 ? false : true,
+                        onClick: ()=>getItems(scannedProduct),
+                        href: "/cart/checkout",
+                        className: "py-1 px-2 m-0 rounded-lg cursor-pointer bg-[#216c58] text-[#fff] hover:bg-[#1c493c]",
                         children: "Checkout"
                     }, void 0, false, {
                         fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                        lineNumber: 30,
+                        lineNumber: 34,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/cart/CheckoutFooter.tsx",
-                lineNumber: 28,
+                lineNumber: 32,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/cart/CheckoutFooter.tsx",
-        lineNumber: 12,
+        lineNumber: 16,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
+_s(CheckoutFooter, "2PiGZvJ/LR/jpUJWjQdTnyEp/b4=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCheckoutStore"]
+    ];
+});
 _c = CheckoutFooter;
 const __TURBOPACK__default__export__ = CheckoutFooter;
 var _c;
@@ -431,29 +490,23 @@ var _s = __turbopack_context__.k.signature();
 ;
 const ItemCard = ()=>{
     _s();
-    const products = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCartStore"])({
-        "ItemCard.useCartStore[products]": (state)=>state.products
-    }["ItemCard.useCartStore[products]"]);
-    const increase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCartStore"])({
-        "ItemCard.useCartStore[increase]": (state)=>state.increaseQuantity
-    }["ItemCard.useCartStore[increase]"]);
-    const decrease = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCartStore"])({
-        "ItemCard.useCartStore[decrease]": (state)=>state.decreaseQuantity
-    }["ItemCard.useCartStore[decrease]"]);
-    const total = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCartStore"])({
-        "ItemCard.useCartStore[total]": (state)=>state.grandTotal
-    }["ItemCard.useCartStore[total]"]);
+    const { decreaseQuantity, increaseQuantity, products } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCartStore"])();
+    const { barcode } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSearchItem"])();
+    const filteredProducts = products.filter((products)=>barcode.includes(products.productBarcode));
+    console.log("barcode", barcode);
+    console.log("filtered", filteredProducts);
+    const total = filteredProducts.reduce((acc, product)=>acc + product.price * product.quantity, 0);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
                 className: "max-w-full max-h-full flex relative overflow-y-hidden",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "sm:mb-5 md:mb-25 lg:mb-25 w-full m-6 grid flex grid-cols-1 items-start justify-center gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 overflow-y-auto",
-                    children: products.map((products)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "xs:mb-25 sm:mb-25 md:mb-25 lg:mb-25 w-screen m-6 grid flex grid-cols-1 items-start justify-center gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 overflow-y-auto",
+                    children: filteredProducts.map((products)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "w-full h-50 flex flex-row rounded-lg bg-[#fff]",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "md:w-2/5 shrink-0",
+                                    className: "shrink-0",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         src: products.imageUrl,
                                         width: 150,
@@ -462,16 +515,16 @@ const ItemCard = ()=>{
                                         className: "object-contain h-full w-[150]"
                                     }, products.id, false, {
                                         fileName: "[project]/components/cart/ItemCard.tsx",
-                                        lineNumber: 27,
+                                        lineNumber: 40,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/components/cart/ItemCard.tsx",
-                                    lineNumber: 26,
+                                    lineNumber: 39,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "max-w-full flex flex-col ",
+                                    className: "w-full flex flex-col ",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "py-5 px-0",
@@ -481,7 +534,7 @@ const ItemCard = ()=>{
                                                     children: products.productName
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/cart/ItemCard.tsx",
-                                                    lineNumber: 38,
+                                                    lineNumber: 51,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -492,147 +545,155 @@ const ItemCard = ()=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/cart/ItemCard.tsx",
-                                                    lineNumber: 41,
+                                                    lineNumber: 54,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/cart/ItemCard.tsx",
-                                            lineNumber: 37,
+                                            lineNumber: 50,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex m-3 mt-auto",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "md:space-x-2 sm:space-x-3 space-x-3 flex flex-row items-center",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                                        onClick: ()=>decrease(products.id),
-                                                        variant: "outline",
-                                                        size: "icon",
-                                                        className: "size-8 text-[#b94350] border-[#b94350] cursor-pointer hover:bg-[#b94350]",
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2Icon$3e$__["Trash2Icon"], {
-                                                            className: ""
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "sm:space-x-3 md:space-x-5 space-x-5 flex flex-row items-center",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                                            onClick: ()=>decreaseQuantity(products.id),
+                                                            variant: "outline",
+                                                            size: "icon",
+                                                            className: "size-8 text-[#b94350] border-[#b94350] cursor-pointer hover:bg-[#b94350]",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2Icon$3e$__["Trash2Icon"], {
+                                                                className: ""
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/cart/ItemCard.tsx",
+                                                                lineNumber: 67,
+                                                                columnNumber: 23
+                                                            }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/cart/ItemCard.tsx",
-                                                            lineNumber: 54,
-                                                            columnNumber: 23
-                                                        }, ("TURBOPACK compile-time value", void 0))
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/cart/ItemCard.tsx",
-                                                        lineNumber: 48,
-                                                        columnNumber: 21
-                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "text-sm font-bold text-gray-700 dark:text-white",
-                                                        children: products.quantity
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/cart/ItemCard.tsx",
-                                                        lineNumber: 56,
-                                                        columnNumber: 21
-                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                                        onClick: ()=>increase(products.id),
-                                                        variant: "outline",
-                                                        size: "icon",
-                                                        className: "size-8 text-[#276857] border-[#276857] cursor-pointer hover:bg-[#78d0b9]",
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$square$2d$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__PlusSquareIcon$3e$__["PlusSquareIcon"], {
-                                                            className: ""
+                                                            lineNumber: 61,
+                                                            columnNumber: 21
+                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-sm font-bold text-gray-700 dark:text-white",
+                                                            children: products.quantity
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/cart/ItemCard.tsx",
-                                                            lineNumber: 65,
-                                                            columnNumber: 23
+                                                            lineNumber: 69,
+                                                            columnNumber: 21
+                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                                            onClick: ()=>increaseQuantity(products.id),
+                                                            variant: "outline",
+                                                            size: "icon",
+                                                            className: "size-8 text-[#276857] border-[#276857] cursor-pointer hover:bg-[#78d0b9]",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$square$2d$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__PlusSquareIcon$3e$__["PlusSquareIcon"], {
+                                                                className: ""
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/cart/ItemCard.tsx",
+                                                                lineNumber: 78,
+                                                                columnNumber: 23
+                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/cart/ItemCard.tsx",
+                                                            lineNumber: 72,
+                                                            columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
-                                                    }, void 0, false, {
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/components/cart/ItemCard.tsx",
+                                                    lineNumber: 60,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "flex ml-auto p-3 justify-end items-end break-all",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-sm text-[#5e5e5e]",
+                                                        children: [
+                                                            "Total: ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                className: "text-sm text-[#216c58] font-bold",
+                                                                children: [
+                                                                    "₱",
+                                                                    (products.quantity * products.price).toFixed(2)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/components/cart/ItemCard.tsx",
+                                                                lineNumber: 84,
+                                                                columnNumber: 23
+                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                        ]
+                                                    }, void 0, true, {
                                                         fileName: "[project]/components/cart/ItemCard.tsx",
-                                                        lineNumber: 59,
+                                                        lineNumber: 82,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0))
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/components/cart/ItemCard.tsx",
-                                                lineNumber: 47,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/cart/ItemCard.tsx",
+                                                    lineNumber: 81,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/components/cart/ItemCard.tsx",
-                                            lineNumber: 46,
+                                            lineNumber: 59,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/cart/ItemCard.tsx",
-                                    lineNumber: 36,
-                                    columnNumber: 15
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex ml-auto p-3 justify-end items-end break-all",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-sm text-[#5e5e5e]",
-                                        children: [
-                                            "Total: ",
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-sm text-[#216c58] font-bold",
-                                                children: [
-                                                    "₱",
-                                                    products.quantity * products.price
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/components/cart/ItemCard.tsx",
-                                                lineNumber: 73,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/cart/ItemCard.tsx",
-                                        lineNumber: 71,
-                                        columnNumber: 17
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                }, void 0, false, {
-                                    fileName: "[project]/components/cart/ItemCard.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 49,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, products.id, true, {
                             fileName: "[project]/components/cart/ItemCard.tsx",
-                            lineNumber: 22,
+                            lineNumber: 35,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/components/cart/ItemCard.tsx",
-                    lineNumber: 19,
+                    lineNumber: 31,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/cart/ItemCard.tsx",
-                lineNumber: 18,
+                lineNumber: 30,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
-                className: "sm:static md:fixed lg:fixed w-full h-auto bottom-0 bg-[#f8faf7] content-center items-center align-center",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$cart$2f$CheckoutFooter$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                    grandTotal: total,
-                    totalItems: products.length
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
+                    className: "fixed w-full w-full h-auto bottom-0 bg-[#f8faf7]",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$cart$2f$CheckoutFooter$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        scannedProduct: filteredProducts,
+                        grandTotal: total,
+                        totalItems: filteredProducts.length
+                    }, void 0, false, {
+                        fileName: "[project]/components/cart/ItemCard.tsx",
+                        lineNumber: 97,
+                        columnNumber: 11
+                    }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/components/cart/ItemCard.tsx",
-                    lineNumber: 83,
+                    lineNumber: 96,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/cart/ItemCard.tsx",
-                lineNumber: 82,
+                lineNumber: 95,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true);
 };
-_s(ItemCard, "9mCFc9SrFfEIW5ZrNw+KHl1k60w=", false, function() {
+_s(ItemCard, "BMWKPBcgAb92fNtFoHOY8cv6id0=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCartStore"],
-        __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCartStore"],
-        __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCartStore"],
-        __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCartStore"]
+        __TURBOPACK__imported__module__$5b$project$5d2f$store$2f$posStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSearchItem"]
     ];
 });
 _c = ItemCard;
