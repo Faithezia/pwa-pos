@@ -10,6 +10,7 @@ const geistSans = Geist({
 
 const inter = Inter({
   variable: "--font-lato",
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
@@ -41,7 +42,6 @@ export default function RootLayout({
       >
         {children}
         <Toaster visibleToasts={1} richColors closeButton position="top-left" />
-        
       </body>
     </html>
   );
