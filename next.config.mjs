@@ -18,7 +18,7 @@ const nextConfig = {
 //     skipWaiting: true,      // skip waiting for service worker activation
 // })(nextConfig);
 
-export default withPWA = require("next-pwa")({
+export default withPWA({
   dest: "public",
   disable: process.env.NODE_ENV === "development",
   register: true,
