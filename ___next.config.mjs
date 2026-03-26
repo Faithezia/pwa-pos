@@ -13,7 +13,7 @@
 
 // export default withPWA({
 //     dest: "public",         // destination directory for the PWA files
-//     disable: process.env.VERCEL === "development",        // disable PWA in the development environment
+//     disable: process.env.NODE_ENV === "development",        // disable PWA in the development environment
 //     register: true,         // register the PWA service worker
 //     skipWaiting: true,      // skip waiting for service worker activation
 // })(nextConfig);
@@ -25,7 +25,6 @@
 // //   skipWaiting: true,
 // // })(nextConfig);
 
-// next.config.mjs
 import withPWA from "next-pwa";
 
 /** @type {import('next').NextConfig} */
@@ -39,11 +38,13 @@ const nextConfig = {
   },
 };
 
-// Wrap withPWA, disable on Vercel
-export default withPWA({
-  ...nextConfig,            // spread plain object
+// Only PWA-specific options go here
+const pwaConfig = {
   dest: "public",
   disable: process.env.VERCEL === "1", // disables PWA on Vercel
   register: true,
   skipWaiting: true,
-});
+};
+
+// Wrap Next.js config with PWA
+export default withPWA(nextConfig, pwaConfig);

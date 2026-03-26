@@ -3,7 +3,8 @@ import path from "path";
 // import withPWA from "next-pwa";
 
 const nextConfig: NextConfig = {
-  turbopack: { //remove if issues arise
+  turbopack: {
+    //remove if issues arise
     root: path.join(__dirname, ".."),
   },
   experimental: {
@@ -13,6 +14,12 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   compiler: {
     removeConsole: process.env.NODE_ENV !== "development",
+  },
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+    disable: process.env.VERCEL === "1",
   },
 };
 // export default withPWA({
