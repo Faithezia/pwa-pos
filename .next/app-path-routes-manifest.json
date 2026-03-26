@@ -2,9 +2,9 @@
   "/_not-found/page": "/_not-found",
   "/favicon.ico/route": "/favicon.ico",
   "/manifest.webmanifest/route": "/manifest.webmanifest",
-  "/(root)/page": "/",
   "/(root)/kyc/page": "/kyc",
+  "/(root)/page": "/",
   "/cart/page": "/cart",
-  "/cart/checkout/page": "/cart/checkout",
-  "/page": "/"
+  "/page": "/",
+  "/cart/checkout/page": "/cart/checkout"
 }

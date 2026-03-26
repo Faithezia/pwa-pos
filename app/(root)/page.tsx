@@ -1,10 +1,9 @@
-"use client";
 import EyeBall from "@/components/EyeBall";
 import { PopupDialog } from "@/components/PopupDialog";
 import Image from "next/image";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <div className="flex flex-col justify-center items-center h-screen">
@@ -36,4 +35,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
