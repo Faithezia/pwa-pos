@@ -26,7 +26,7 @@ const Page = () => {
           alt="App Logo"
           className="rounded-sm mb-8"
         />
-        <PopupDialog /> 
+        <PopupDialog />
       </div>
     </div>
   );
