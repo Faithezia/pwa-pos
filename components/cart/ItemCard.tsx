@@ -1,13 +1,9 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "../ui/button";
-import { PlusSquareIcon, Trash2Icon, XCircleIcon } from "lucide-react";
-import {
-  useCartStore,
-  useCheckoutStore,
-  useSearchItem,
-} from "@/store/posStore";
+import { PlusSquareIcon, Trash2Icon } from "lucide-react";
+import { useCartStore, useSearchItem } from "@/store/posStore";
 import CheckoutFooter from "./CheckoutFooter";
 
 const ItemCard = () => {
@@ -21,7 +17,7 @@ const ItemCard = () => {
   console.log("filtered", filteredProducts);
   const total = filteredProducts.reduce(
     (acc, product) => acc + product.price * product.quantity,
-    0
+    0,
   );
 
   return (
@@ -39,7 +35,9 @@ const ItemCard = () => {
                 <div className="shrink-0">
                   <Image
                     key={products.id}
-                    src={image ? "/images/image-not-found.png" : products.imageUrl}
+                    src={
+                      image ? "/images/image-not-found.png" : products.imageUrl
+                    }
                     width={100}
                     height={100}
                     alt="image"

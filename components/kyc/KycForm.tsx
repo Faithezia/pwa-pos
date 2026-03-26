@@ -2,13 +2,12 @@
 import { userSchema } from "@/lib/validations";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { redirect, useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import z from "zod";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -133,7 +132,7 @@ const KycForm = () => {
               href={"/"}
               className="flex flex-row px-2 py-1 text-sm items-center rounded-lg cursor-pointer bg-[#f7f5dc] hover:bg-[#d5d4c5] text-[#000] font-semibold"
             >
-              <ArrowLeftIcon className="mr-2"/>
+              <ArrowLeftIcon className="mr-2" />
               BACK
             </Link>
             <Button

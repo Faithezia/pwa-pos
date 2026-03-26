@@ -1,9 +1,8 @@
 import React from "react";
 import { Button } from "../ui/button";
-import { LucideScanQrCode, QrCodeIcon } from "lucide-react";
+import {  QrCodeIcon } from "lucide-react";
 import Link from "next/link";
 import { useCheckoutStore } from "@/store/posStore";
-import { get } from "http";
 
 interface Props {
   scannedProduct: Product[];

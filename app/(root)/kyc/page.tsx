@@ -1,6 +1,5 @@
 "use client";
 import KycForm from "@/components/kyc/KycForm";
-import { ArrowLeftIcon } from "lucide-react";
 import React from "react";
 
 const Kyc = () => {

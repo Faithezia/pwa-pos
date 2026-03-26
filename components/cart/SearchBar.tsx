@@ -12,7 +12,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../ui/dialog";
-import { Button } from "../ui/button";
 import { BarcodeIcon } from "lucide-react";
 import { Input } from "../ui/input";
 import z from "zod";
@@ -23,10 +22,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "../ui/form";
 

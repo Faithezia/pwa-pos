@@ -98,7 +98,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\jmofianga\\Desktop\\next-zod",
+    "outputFileTracingRoot": "C:\\source_code\\next-js\\pwa-pos",
     "experimental": {
       "useSkewCookie": false,
       "nodeMiddleware": false,
@@ -157,7 +157,7 @@
       "middlewarePrefetch": "flexible",
       "optimisticClientCache": true,
       "manualClientBasePath": false,
-      "cpus": 3,
+      "cpus": 15,
       "memoryBasedWorkersCount": false,
       "imgOptConcurrency": null,
       "imgOptTimeoutInSeconds": 7,
@@ -288,12 +288,11 @@
     "htmlLimitedBots": "Mediapartners-Google|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti",
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
-    "swcMinify": true,
     "turbopack": {
-      "root": "C:\\Users\\jmofianga\\Desktop\\next-zod"
+      "root": "C:\\source_code\\next-js\\pwa-pos"
     }
   },
-  "appDir": "C:\\Users\\jmofianga\\Desktop\\next-zod",
+  "appDir": "C:\\source_code\\next-js\\pwa-pos",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
