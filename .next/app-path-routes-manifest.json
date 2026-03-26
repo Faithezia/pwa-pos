@@ -3,8 +3,8 @@
   "/favicon.ico/route": "/favicon.ico",
   "/manifest.webmanifest/route": "/manifest.webmanifest",
   "/(root)/page": "/",
+  "/(root)/kyc/page": "/kyc",
   "/cart/page": "/cart",
   "/cart/checkout/page": "/cart/checkout",
-  "/(root)/kyc/page": "/kyc",
   "/page": "/"
 }

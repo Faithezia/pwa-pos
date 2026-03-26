@@ -33,6 +33,16 @@
       "static/chunks/443-f8c7d67f816f731b.js",
       "static/chunks/app/page-73d6b864aad65c58.js"
     ],
+    "/(root)/kyc/page": [
+      "static/chunks/webpack-9aaab1d2eba7cb50.js",
+      "static/chunks/4bd1b696-cf72ae8a39fa05aa.js",
+      "static/chunks/964-60efd35770e0bfbd.js",
+      "static/chunks/main-app-2f73cf9a13ea27a7.js",
+      "static/chunks/92-0711a10572fda033.js",
+      "static/chunks/671-ea16f1dd3bcef2d9.js",
+      "static/chunks/804-0ffbac3cfddb8026.js",
+      "static/chunks/app/(root)/kyc/page-4f6a22e3129384af.js"
+    ],
     "/cart/page": [
       "static/chunks/webpack-9aaab1d2eba7cb50.js",
       "static/chunks/4bd1b696-cf72ae8a39fa05aa.js",
@@ -52,18 +62,8 @@
       "static/chunks/main-app-2f73cf9a13ea27a7.js",
       "static/chunks/92-0711a10572fda033.js",
       "static/chunks/620-460ecf398307dde3.js",
-      "static/chunks/750-e35f4c0dfbc7fc2d.js",
+      "static/chunks/750-c9fe911336a2e0c0.js",
       "static/chunks/app/cart/checkout/page-389c8462656e0d7b.js"
-    ],
-    "/(root)/kyc/page": [
-      "static/chunks/webpack-9aaab1d2eba7cb50.js",
-      "static/chunks/4bd1b696-cf72ae8a39fa05aa.js",
-      "static/chunks/964-60efd35770e0bfbd.js",
-      "static/chunks/main-app-2f73cf9a13ea27a7.js",
-      "static/chunks/92-0711a10572fda033.js",
-      "static/chunks/671-ea16f1dd3bcef2d9.js",
-      "static/chunks/804-0ffbac3cfddb8026.js",
-      "static/chunks/app/(root)/kyc/page-c9d0a510be6144b1.js"
     ]
   }
 }
